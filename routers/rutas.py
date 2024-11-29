@@ -1,4 +1,4 @@
-from controllers import inicio, acerca_de_mi, portafolio, contacto, api_handler
+from controllers import inicio, acerca_de_mi, portafolio, contacto, api_handler, simulador
 
 
 def registrar_rutas(app):
@@ -17,6 +17,10 @@ def registrar_rutas(app):
     @app.route('/contactame')
     def ruta_contacto():
         return contacto()
+    
+    @app.route('/3d')
+    def ruta_simulador():
+        return simulador()
 
     @app.route('/api', methods=['GET'])
     def ruta_api():

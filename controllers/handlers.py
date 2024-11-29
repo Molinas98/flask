@@ -13,6 +13,9 @@ def portafolio():
 def contacto():
     return render_template('pages/contacto.html')
 
+def simulador():
+    return render_template('pages/view3d.html')
+
 def api_handler():
     try:
         API_URL = 'https://reqres.in/api/users?page=1'
